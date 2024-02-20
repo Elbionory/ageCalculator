@@ -1,0 +1,14 @@
+{
+  "name": "age-calculator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+   "compile:sass":"sass main.scss style.css --watch"
+  },
+  "author": "yousif",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.7"
+  }
+}

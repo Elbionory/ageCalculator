@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$color-Purple: hsl(259, 100%, 65%);
+$color-Light-red: hsl(0, 100%, 67%);
+$color-White: hsl(0, 0%, 100%);
+$color-Off-white: hsl(0, 0%, 94%);
+$color-Light-grey: hsl(0, 0%, 86%);
+$color-Smokey-grey: hsl(0, 1%, 44%);
+$color-Off-black: hsl(0, 0%, 8%);
+// - Font size (inputs): 32px
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+body {
+  background-color: $color-Off-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-Off-white;
+}
+.container {
+  border-radius: 20px;
+  border-bottom-right-radius: 25%;
+  background-color: $color-White;
+  width: 600px;
+  height: 460px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .time-input {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    border-bottom: 1px solid rgb($color-Smokey-grey, 0.3);
+    input {
+      border: 1px solid rgb($color-Smokey-grey, 0.3);
+      border-radius: 10px;
+      width: 25%;
+      font-size: 32px;
+      outline: none;
+      font-weight: 800;
+      padding-left: 20px;
+      height: 70%;
+    }
+  }
+  button {
+    position: absolute;
+    right: 25px;
+    bottom: 68.5%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid $color-White;
+    background-color: $color-Purple;
+    cursor: pointer;
+    transition: all .4s;
+    box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      border-radius: inherit;
+      z-index: -1;
+      transition: all .5s;
+    }
+    &:hover::before{
+      transform:scaleX(1.5) scaleY(1.5);
+      opacity: 0;
+    }
+    &:hover {
+   transform: translateY(-3px);
+     
+    &:active{
+      transform: translateY(0px);
+      box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.75);
+    }
+    }
+  }
+  .age {
+    height: 80%;
+    width: 100%;
+    padding: 10px;
+    font-size: 40px;
+
+    h2 {
+      height: 100px;
+      text-align: left;
+      font-style: italic;
+      font-size: 90px;
+      span {
+        color: $color-Purple;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 370px;
+    height: 500px;
+    border-bottom-right-radius: 35%;
+    .time-input {
+      input {
+        height: 50%;
+        width: 50%;
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+      }
+    }
+    button {
+      background-color: $color-Purple;
+      width: 50px;
+      height: 50px;
+      right: 44%;
+      bottom: 63%;
+    
+  
+  }
+    .age {
+      height: 60%;
+      width: 100%;
+      padding: 10px;
+      padding-top: 60px;
+      h2 {
+        height: 75px;
+        text-align: left;
+        font-style: italic;
+        font-size: 55px;
+        span {
+          color: $color-Purple;
+        }
+      }
+    }
+  }
+}
